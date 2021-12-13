@@ -1,2 +1,2 @@
 # CoreDataApp
-My learning/exploration of CoreData
+My learning/exploration of the the `CoreData` framework
