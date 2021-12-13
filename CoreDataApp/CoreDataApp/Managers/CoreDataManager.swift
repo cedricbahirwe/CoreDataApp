@@ -62,6 +62,16 @@ class CoreDataManager {
             print("Failed to delete movie : \(error.localizedDescription)")
 
         }
-        
+    }
+    
+    func updateMovie() {
+        do {
+            try persistentContainer.viewContext.save()
+            print("Movie has been updated")
+        } catch {
+            persistentContainer.viewContext.rollback()
+            print("Failed to update movie : \(error.localizedDescription)")
+
+        }
     }
 }

@@ -14,19 +14,14 @@ struct ContentView: View {
     
     @State private var movies: [Movie] = []
     var body: some View {
-        VStack {
-            
-            TextField("Enter movie title", text: $movieTitle)
-                .textFieldStyle(.roundedBorder)
-            
-            Button("Save") {
-                coreDM.saveMovie(title: movieTitle)
-                fetchAllMovies()
-            }
-            
+        NavigationView {
             List {
                 ForEach(movies, id:\.self) { movie in
-                    Text(movie.title ?? "No Title")
+                    NavigationLink(destination: {
+                        MovieDetail(movie: movie, coreDM: coreDM)
+                    }) {
+                        Text(movie.title ?? "No Title")
+                    }
                 }
                 .onDelete { indexSet in
                     indexSet.forEach { index in
@@ -37,12 +32,28 @@ struct ContentView: View {
                         fetchAllMovies()
                     }
                 }
+
             }
-        }
-        .padding()
-        .onAppear {
-            fetchAllMovies()
-            
+            .navigationBarTitle("Movies")
+            .safeAreaInset(edge: .bottom) {
+                VStack {
+                    TextField("Enter movie title", text: $movieTitle)
+                        .textFieldStyle(.roundedBorder)
+                    
+                    Button("Save") {
+                        guard !movieTitle.isEmpty else { return }
+                        coreDM.saveMovie(title: movieTitle)
+                        fetchAllMovies()
+                    }
+                }
+                .padding()
+                .background(.regularMaterial)
+                
+            }
+            .onAppear {
+                fetchAllMovies()
+                
+            }
         }
     }
     

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		826811D22767F0F9004D651D /* ExampleModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 826811D02767F0F9004D651D /* ExampleModel.xcdatamodeld */; };
 		826811D62767F30D004D651D /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826811D52767F30D004D651D /* CoreDataManager.swift */; };
+		826811D82767FAC7004D651D /* MovieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826811D72767FAC7004D651D /* MovieDetail.swift */; };
 		82770C342767F06C00AD654F /* CoreDataAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82770C332767F06C00AD654F /* CoreDataAppApp.swift */; };
 		82770C362767F06C00AD654F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82770C352767F06C00AD654F /* ContentView.swift */; };
 		82770C382767F06E00AD654F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82770C372767F06E00AD654F /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* Begin PBXFileReference section */
 		826811D12767F0F9004D651D /* ExampleModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ExampleModel.xcdatamodel; sourceTree = "<group>"; };
 		826811D52767F30D004D651D /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		826811D72767FAC7004D651D /* MovieDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetail.swift; sourceTree = "<group>"; };
 		82770C302767F06C00AD654F /* CoreDataApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82770C332767F06C00AD654F /* CoreDataAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataAppApp.swift; sourceTree = "<group>"; };
 		82770C352767F06C00AD654F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				826811D32767F2BF004D651D /* Managers */,
 				82770C332767F06C00AD654F /* CoreDataAppApp.swift */,
 				82770C352767F06C00AD654F /* ContentView.swift */,
+				826811D72767FAC7004D651D /* MovieDetail.swift */,
 				82770C372767F06E00AD654F /* Assets.xcassets */,
 				82770C392767F06E00AD654F /* Preview Content */,
 				826811D02767F0F9004D651D /* ExampleModel.xcdatamodeld */,
@@ -153,6 +156,7 @@
 			files = (
 				826811D22767F0F9004D651D /* ExampleModel.xcdatamodeld in Sources */,
 				82770C362767F06C00AD654F /* ContentView.swift in Sources */,
+				826811D82767FAC7004D651D /* MovieDetail.swift in Sources */,
 				826811D62767F30D004D651D /* CoreDataManager.swift in Sources */,
 				82770C342767F06C00AD654F /* CoreDataAppApp.swift in Sources */,
 			);
