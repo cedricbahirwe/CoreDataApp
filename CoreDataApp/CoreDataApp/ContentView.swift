@@ -13,12 +13,14 @@ struct ContentView: View {
     @State private var movieTitle: String = ""
     
     @State private var movies: [Movie] = []
+    @State private var needsRefresh: Bool = false
+    
     var body: some View {
         NavigationView {
             List {
                 ForEach(movies, id:\.self) { movie in
                     NavigationLink(destination: {
-                        MovieDetail(movie: movie, coreDM: coreDM)
+                        MovieDetail(movie: movie, coreDM: coreDM, needsRefresh: $needsRefresh)
                     }) {
                         Text(movie.title ?? "No Title")
                     }
@@ -47,7 +49,7 @@ struct ContentView: View {
                     }
                 }
                 .padding()
-                .background(.regularMaterial)
+                .background(needsRefresh ? .thickMaterial : .regularMaterial)
                 
             }
             .onAppear {
