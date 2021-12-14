@@ -8,7 +8,7 @@
 import CoreData
 
 class CoreDataManagerSecond {
-    lazy var managedObject: NSManagedObjectModel = {
+    lazy var managedObjectModel: NSManagedObjectModel = {
         guard let url = Bundle.main.url(forResource: "ExampleModel", withExtension: "momd") else {
             fatalError("Failed to locate the ExampleModel file.")
         }
@@ -18,5 +18,20 @@ class CoreDataManagerSecond {
         }
         
         return model
+    }()
+    
+    lazy var coordinator: NSPersistentStoreCoordinator = {
+        let coordinator = NSPersistentStoreCoordinator(managedObjectModel: managedObjectModel)
+        let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        
+        let sqlitePath = documentsDirectory.appendingPathComponent("example.sqlite")
+        
+        do {
+            try coordinator.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: sqlitePath, options: nil)
+        } catch {
+            fatalError("Failed to create coordinator: \(error.localizedDescription)")
+        }
+        
+        return coordinator
     }()
 }
