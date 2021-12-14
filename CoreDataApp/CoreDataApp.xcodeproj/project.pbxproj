@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		824D4F1C276949CE00738014 /* CoreDataManagerSecond.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824D4F1B276949CE00738014 /* CoreDataManagerSecond.swift */; };
 		826811D22767F0F9004D651D /* ExampleModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 826811D02767F0F9004D651D /* ExampleModel.xcdatamodeld */; };
 		826811D62767F30D004D651D /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826811D52767F30D004D651D /* CoreDataManager.swift */; };
 		826811D82767FAC7004D651D /* MovieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826811D72767FAC7004D651D /* MovieDetail.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		824D4F1B276949CE00738014 /* CoreDataManagerSecond.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManagerSecond.swift; sourceTree = "<group>"; };
 		826811D12767F0F9004D651D /* ExampleModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ExampleModel.xcdatamodel; sourceTree = "<group>"; };
 		826811D52767F30D004D651D /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		826811D72767FAC7004D651D /* MovieDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetail.swift; sourceTree = "<group>"; };
@@ -42,6 +44,7 @@
 			isa = PBXGroup;
 			children = (
 				826811D52767F30D004D651D /* CoreDataManager.swift */,
+				824D4F1B276949CE00738014 /* CoreDataManagerSecond.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				824D4F1C276949CE00738014 /* CoreDataManagerSecond.swift in Sources */,
 				826811D22767F0F9004D651D /* ExampleModel.xcdatamodeld in Sources */,
 				82770C362767F06C00AD654F /* ContentView.swift in Sources */,
 				826811D82767FAC7004D651D /* MovieDetail.swift in Sources */,
