@@ -11,7 +11,7 @@ import SwiftUI
 struct CoreDataAppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView(coreDM: CoreDataManager())
+            MovieListScreen()
         }
     }
 }
