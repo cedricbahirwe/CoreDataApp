@@ -5,11 +5,10 @@
 //  Created by Cédric Bahirwe on 13/12/2021.
 //
 
-import Foundation
 import CoreData
 
 class CoreDataManager {
-    private let persistentContainer: NSPersistentContainer
+    let persistentContainer: NSPersistentContainer
     
     init() {
         persistentContainer = NSPersistentContainer(name: "ExampleModel")
