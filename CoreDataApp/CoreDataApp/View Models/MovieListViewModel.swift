@@ -19,6 +19,14 @@ class MovieListViewModel: ObservableObject {
             self.movies = movies.map(MovieViewModel.init)
         }
     }
+    
+    public func deleteMovie(movie: MovieViewModel) {
+        let movie = CoreDataManager.shared.getMoview(by: movie.id)
+        
+        if let movie = movie {
+            CoreDataManager.shared.deleteMovie(movie: movie)
+        }
+    }
 }
 
 

@@ -44,6 +44,15 @@ class CoreDataManager {
         }
     }
     
+    func getMoview(by id: NSManagedObjectID) -> Movie? {
+        do {
+            return try persistentContainer.viewContext.existingObject(with: id) as? Movie
+        } catch {
+            print("Can't find movie: \(error.localizedDescription)")
+            return nil
+        }
+    }
+    
     // Delete a movie
     func deleteMovie(movie: Movie) {
         persistentContainer.viewContext.delete(movie)

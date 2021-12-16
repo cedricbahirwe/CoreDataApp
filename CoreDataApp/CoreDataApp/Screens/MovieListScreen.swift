@@ -17,6 +17,7 @@ struct MovieListScreen: View {
             ForEach(movieListVM.movies, id: \.id) { movie in
                 MovieCell(movie: movie)
             }
+            .onDelete(perform: deleteMovie)
             
         }
         .listStyle(PlainListStyle())
@@ -34,6 +35,16 @@ struct MovieListScreen: View {
         .onAppear(perform: {
             movieListVM.getAllMovies()
         })
+    }
+    
+    private func deleteMovie(at indexSet: IndexSet) {
+        indexSet.forEach { index in
+            let movie = movieListVM.movies[index]
+            
+            movieListVM.deleteMovie(movie: movie)
+            
+            movieListVM.getAllMovies()
+        }
     }
 }
 
