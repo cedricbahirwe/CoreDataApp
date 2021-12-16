@@ -9,7 +9,7 @@ import Foundation
 import CoreData
 
 class CoreDataManager {
-    let persistentContainer: NSPersistentContainer
+    private let persistentContainer: NSPersistentContainer
     
     init() {
         persistentContainer = NSPersistentContainer(name: "ExampleModel")
