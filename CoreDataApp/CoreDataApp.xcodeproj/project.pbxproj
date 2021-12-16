@@ -13,6 +13,8 @@
 		82403B76276BDDD90007B5B7 /* AddMovieScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82403B75276BDDD90007B5B7 /* AddMovieScreen.swift */; };
 		82403B78276BDDEB0007B5B7 /* MovieListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82403B77276BDDEB0007B5B7 /* MovieListScreen.swift */; };
 		82403B7F276BDF950007B5B7 /* MovieAppModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 82403B7D276BDF950007B5B7 /* MovieAppModel.xcdatamodeld */; };
+		82403B81276BE2260007B5B7 /* AddMovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82403B80276BE2260007B5B7 /* AddMovieViewModel.swift */; };
+		82403B83276BE52B0007B5B7 /* MovieListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82403B82276BE52B0007B5B7 /* MovieListViewModel.swift */; };
 		826811D62767F30D004D651D /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826811D52767F30D004D651D /* CoreDataManager.swift */; };
 		82770C342767F06C00AD654F /* CoreDataAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82770C332767F06C00AD654F /* CoreDataAppApp.swift */; };
 		82770C382767F06E00AD654F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82770C372767F06E00AD654F /* Assets.xcassets */; };
@@ -26,6 +28,8 @@
 		82403B75276BDDD90007B5B7 /* AddMovieScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMovieScreen.swift; sourceTree = "<group>"; };
 		82403B77276BDDEB0007B5B7 /* MovieListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListScreen.swift; sourceTree = "<group>"; };
 		82403B7E276BDF950007B5B7 /* MovieAppModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MovieAppModel.xcdatamodel; sourceTree = "<group>"; };
+		82403B80276BE2260007B5B7 /* AddMovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMovieViewModel.swift; sourceTree = "<group>"; };
+		82403B82276BE52B0007B5B7 /* MovieListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewModel.swift; sourceTree = "<group>"; };
 		824D4F1B276949CE00738014 /* CoreDataManagerSecond.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManagerSecond.swift; sourceTree = "<group>"; };
 		826811D52767F30D004D651D /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		82770C302767F06C00AD654F /* CoreDataApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,6 +60,8 @@
 		82403B6C276BDD620007B5B7 /* View Models */ = {
 			isa = PBXGroup;
 			children = (
+				82403B80276BE2260007B5B7 /* AddMovieViewModel.swift */,
+				82403B82276BE52B0007B5B7 /* MovieListViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -198,6 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				82403B76276BDDD90007B5B7 /* AddMovieScreen.swift in Sources */,
+				82403B81276BE2260007B5B7 /* AddMovieViewModel.swift in Sources */,
 				82403B74276BDDB70007B5B7 /* Date+Extensions.swift in Sources */,
 				826811D62767F30D004D651D /* CoreDataManager.swift in Sources */,
 				82770C342767F06C00AD654F /* CoreDataAppApp.swift in Sources */,
@@ -205,6 +212,7 @@
 				82403B78276BDDEB0007B5B7 /* MovieListScreen.swift in Sources */,
 				82403B72276BDDA60007B5B7 /* View+Extensions.swift in Sources */,
 				82403B70276BDD8A0007B5B7 /* RatingView.swift in Sources */,
+				82403B83276BE52B0007B5B7 /* MovieListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,8 +10,10 @@ import CoreData
 class CoreDataManager {
     let persistentContainer: NSPersistentContainer
     
-    init() {
-        persistentContainer = NSPersistentContainer(name: "ExampleModel")
+    static let shared = CoreDataManager()
+    
+    private init() {
+        persistentContainer = NSPersistentContainer(name: "MovieAppModel")
         
         persistentContainer.loadPersistentStores { (description, error) in
             if let error = error {
@@ -20,23 +22,18 @@ class CoreDataManager {
         }
     }
     
-    // Save movie
-    func saveMovie(title: String) {
-        let movie = Movie(context: persistentContainer.viewContext)
-        
-        movie.title = title
-        
+    func save() {
         do {
             try persistentContainer.viewContext.save()
-            print("Movie has been saved")
         } catch {
-            print("Failed to save movie : \(error.localizedDescription)")
+            print("Failed to save a movie \(error.localizedDescription)")
         }
-        
     }
     
+    
     // Get all movies
-    func getAllMovies() ->  [Movie] {
+    func getAllMovies() -> [Movie] {
+        
         let fetchRequest: NSFetchRequest<Movie> = Movie.fetchRequest()
         
         do {
