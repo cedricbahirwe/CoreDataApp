@@ -11,14 +11,12 @@ import CoreData
 class CoreDataManager {
     let persistentContainer: NSPersistentContainer
     
-    
-    // Performs initialization
     init() {
         persistentContainer = NSPersistentContainer(name: "ExampleModel")
         
         persistentContainer.loadPersistentStores { (description, error) in
             if let error = error {
-                fatalError("Core Data Store failed to initilialize, error: \(error.localizedDescription)")
+                fatalError("CoreData Store failed to initilialize, error: \(error.localizedDescription)")
             }
         }
     }
